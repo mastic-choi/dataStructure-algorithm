@@ -1,4 +1,4 @@
-#Class로 스택을 구현해보자!
+#P51 연습문제를 풀어보자
 class ArrayStack :
     def __init__(self, capacity):
         self.capacity = capacity
@@ -38,3 +38,17 @@ class ArrayStack :
 
     def size(self):
         return self.top+1
+    #연습 문제 2번 : 스택을 공백 상태로 초기화하는 Clear 연산
+    def clear(self):
+        self.array = [None]*0
+        self.top = -1
+    
+    def display(self):
+        for i in self.array:
+            if i != None:
+                print(i)
+
+n = ArrayStack(3)
+n.push(1)
+n.push(5)
+n.display()
